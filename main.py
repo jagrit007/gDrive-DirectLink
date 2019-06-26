@@ -21,7 +21,15 @@ while i != "q":
 list1.pop(-1)
 #print(list1)
 for link in list1:
-    if link.find("&export=download") == -1:
+  if link.find("file/d/") != -1:
+        id_part = link.find("file/d/")
+        id = link[id_part+7:]
+        new_id = id.replace("/view?usp=drivesdk", "")
+        final_url = f"https://www.googleapis.com/drive/v3/files/{new_id}?alt=media&key={api}"
+        print(f"""
+        {final_url}
+        """)
+    elif link.find("&export=download") == -1:
         id_part = link.find("id=")
         id = link[id_part+3:]
         #print(id)
