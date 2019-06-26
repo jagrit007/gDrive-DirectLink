@@ -10,7 +10,9 @@
    * Go to the OAuth Consent tab, fill it, and save.
    * Go to the Credentials tab and click Create Credentials -> API KEY
    * Choose Other and Create.
-   * Copy your API KEY and paste it in main.py in first line 
+   * Copy your API KEY
+   * In terminal, `nano main.py`
+   * Replace `PasteHere` with the api you got.
      ```api = "PasteHere"```
 
 2. Enable the Drive API:
